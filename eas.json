@@ -1,6 +1,7 @@
 {
   "cli": {
-    "version": ">= 10.2.1"
+    "version": ">= 10.2.1",
+    "appVersionSource": "remote"
   },
   "build": {
     "preview": {
@@ -10,13 +11,18 @@
         "autoIncrement": "versionCode"
       },
       "ios": {
-        "simulator": true
+        "simulator": true,
+        "autoIncrement": "buildNumber"
       }
     },
     "production": {
       "autoIncrement": true,
       "android": {
         "autoIncrement": "versionCode"
+      },
+      "ios": {
+        "image": "latest",
+        "autoIncrement": "buildNumber"
       }
     }
   },
@@ -26,6 +32,10 @@
         "track": "internal",
         "servicesAccountKeyPath": "google-services.json",
         "releaseStatus": "draft"
+      },
+      "ios": {
+        "appleId": "aoddrewiid@gmail.com",
+        "ascAppId": ""
       }
     }
   }
